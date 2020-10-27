@@ -15,5 +15,5 @@ Feature:
   	Given I connect to the API server
     When I send GET HTTP retrieve used cars request
     Then I receive valid HTTP Response
-    And The car contains the information of Number plate, Kilometres, Body and Seats
+    And The car contains the details of Number plate, Kilometres, Body and Seats
     

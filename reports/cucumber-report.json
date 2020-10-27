@@ -1,0 +1,158 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Query a list of charities",
+        "description": "",
+        "id": ";query-a-list-of-charities",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 115366042,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I connect to the API server",
+            "match": {
+              "location": "APITestStepDef.setUp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3587950932,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I send GET HTTP retrieve charities request",
+            "match": {
+              "location": "APITestStepDef.queryCharities()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1721419,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I receive valid HTTP Response",
+            "match": {
+              "location": "APITestStepDef.checkResponseCode()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2377105,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "St Johin is included in the list",
+            "match": {
+              "location": "APITestStepDef.vefiryGetResponse()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@GetAPI"
+          },
+          {
+            "line": 6,
+            "name": "@Charities"
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Retrieve a list of Used Cars",
+        "description": "",
+        "id": ";retrieve-a-list-of-used-cars",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 27313,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I connect to the API server",
+            "match": {
+              "location": "APITestStepDef.setUp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 96457451,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I send GET HTTP retrieve used cars request",
+            "match": {
+              "location": "APITestStepDef.queryUsedCars()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 788601,
+              "error_message": "java.lang.AssertionError: response status code is not 200 expected [401] but found [200]\n\tat org.testng.Assert.fail(Assert.java:99)\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\n\tat org.testng.Assert.assertEquals(Assert.java:122)\n\tat org.testng.Assert.assertEquals(Assert.java:907)\n\tat cucumber.steps.APITestStepDef.checkResponseCode(APITestStepDef.java:77)\n\tat ✽.Then I receive valid HTTP Response(src/test/resources/APIService.feature:17)\n",
+              "status": "failed"
+            },
+            "line": 17,
+            "name": "I receive valid HTTP Response",
+            "match": {
+              "location": "APITestStepDef.checkResponseCode()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "The car contains the details of Number plate, Kilometres, Body and Seats",
+            "match": {
+              "location": "APITestStepDef.confirmUsedCarsDetails()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 13,
+            "name": "@GetAPI"
+          },
+          {
+            "line": 13,
+            "name": "@UsedCars"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "As an API tester\nI want to confirm the correctness of API services",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "src/test/resources/APIService.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SmokeTest"
+      },
+      {
+        "line": 1,
+        "name": "@Regression"
+      }
+    ]
+  }
+]

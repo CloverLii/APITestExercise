@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="3.804688">
+<testcase classname="" name="Query a list of charities" time="3.707415">
+<system-out><![CDATA[Given I connect to the API server...........................................passed
+When I send GET HTTP retrieve charities request.............................passed
+Then I receive valid HTTP Response..........................................passed
+And St Johin is included in the list........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="" name="Retrieve a list of Used Cars" time="0.097273">
+<failure message="java.lang.AssertionError: response status code is not 200 expected [401] but found [200]&#10;&#9;at org.testng.Assert.fail(Assert.java:99)&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:1037)&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:140)&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:122)&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:907)&#10;&#9;at cucumber.steps.APITestStepDef.checkResponseCode(APITestStepDef.java:77)&#10;&#9;at ✽.Then I receive valid HTTP Response(src/test/resources/APIService.feature:17)&#10;"><![CDATA[Given I connect to the API server...........................................passed
+When I send GET HTTP retrieve used cars request.............................passed
+Then I receive valid HTTP Response..........................................failed
+And The car contains the details of Number plate, Kilometres, Body and Seats.skipped
+
+StackTrace:
+java.lang.AssertionError: response status code is not 200 expected [401] but found [200]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at cucumber.steps.APITestStepDef.checkResponseCode(APITestStepDef.java:77)
+	at ✽.Then I receive valid HTTP Response(src/test/resources/APIService.feature:17)
+]]></failure>
+</testcase>
+</testsuite>
